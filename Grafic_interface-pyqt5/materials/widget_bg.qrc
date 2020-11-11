@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="new">
+    <file>widget_bg.jpg</file>
+    <file>fastener.png</file>
+  </qresource>
+</RCC>
