@@ -127,7 +127,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_remove_everyone_info">
+   <widget class="QPushButton" name="pb_info_about_all">
     <property name="geometry">
      <rect>
       <x>700</x>
@@ -146,6 +146,9 @@
     </property>
     <property name="cursor">
      <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Узнать подробнее</string>
@@ -190,12 +193,15 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_add_everyone">
+      <widget class="QPushButton" name="pb_add_everyone">
        <property name="font">
         <font>
          <family>Roboto Thin</family>
          <pointsize>24</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>Добавить всех</string>
@@ -203,12 +209,15 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_remove_everyone">
+      <widget class="QPushButton" name="pb_remove_everyone">
        <property name="font">
         <font>
          <family>Roboto Thin</family>
          <pointsize>24</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>Удалить всех</string>
@@ -217,14 +226,37 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="pb_exit">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>860</y>
+      <width>431</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Medium</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(191, 127, 191);</string>
+    </property>
+    <property name="text">
+     <string>Выйти</string>
+    </property>
+   </widget>
    <zorder>background</zorder>
    <zorder>user_info</zorder>
    <zorder>list_users</zorder>
    <zorder>label_all</zorder>
    <zorder>name_project</zorder>
    <zorder>label_selected</zorder>
-   <zorder>pushButton_remove_everyone_info</zorder>
+   <zorder>pb_info_about_all</zorder>
    <zorder>verticalLayoutWidget</zorder>
+   <zorder>pb_exit</zorder>
   </widget>
  </widget>
  <resources>
