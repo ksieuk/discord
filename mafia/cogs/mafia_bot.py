@@ -60,15 +60,12 @@ class Mafia(commands.Cog, name="Mafia"):
         await message_on_start.add_reaction(self.emoji_yes)
         await message_on_start.add_reaction(self.emoji_no)
 
-        self.message_on_start_id = message_on_start.id  # TODO (or not) короче странная штука. может по-другому? wait_for
+        self.message_on_start_id = message_on_start.id  # wait_for
 
     @commands.command(pass_context=True)
     @commands.has_role('Ведущий')
     async def start(self, ctx, channel: discord.VoiceChannel = None):
         """Starting the game and changing nicknames"""
-
-        self.is_playing = True  # TODO непонятно зачем
-        print('---------', self.users_in_game)
 
         if not channel:
             channel = self.client.get_channel(706947485083500654)
@@ -83,6 +80,8 @@ class Mafia(commands.Cog, name="Mafia"):
 
                 await member.move_to(channel)
                 count += 1
+        else:
+            ctx.send("Хорошей игры!")
 
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
@@ -151,8 +150,8 @@ class Mafia(commands.Cog, name="Mafia"):
         self.is_playing = False
 
         for member in players:
-            nick = member.nick
-            if nick[0] == '[' and ']' in nick and nick[1:nick.index(']')].isdigit(self):
+            nick = str(member.nick)
+            if nick[0] == '[' and ']' in nick and nick[1:nick.index(']')].isdigit():
                 await member.edit(nick=f'{member.nick[nick.index("]") + 2:]}')
 
         await ctx.message.add_reaction(self.emoji_yes)
@@ -303,7 +302,7 @@ class Mafia(commands.Cog, name="Mafia"):
             channel = self.client.get_channel(705482683702313092)  # logs
             await channel.send(f"{ctx.author.mention} вырубил бота")
         else:
-            print("Бот бота того")
+            print("Бот отключил бота")
         await ctx.bot.logout()
 
 
