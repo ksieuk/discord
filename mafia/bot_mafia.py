@@ -52,5 +52,5 @@ async def on_ready():
     # await bot.change_presence(game=discord.Game(name="Cogs Example",type=1, url="https://twitch.tv/limba3"))
     print(f"Successfully logged in and booted...!")
 
-TOKEN = "NjcwMzg1ODczODQ5Njc5OTAy.Xitnfw.l9ImhJI0v0TsNjD7ahfPZlo1pnU"
+TOKEN = "NjcwMzg1ODczODQ5Njc5OTAy.Xitnfw.aACUEJFhMUXLQnG2NE2Qk8NBTRE"
 bot.run(TOKEN, bot=True, reconnect=True)
